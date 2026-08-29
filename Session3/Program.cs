@@ -648,6 +648,41 @@ namespace Session3
 
             // 24. Write a program in C# Sharp to find the second largest element in an array.
 
+            //Console.Write("Enter array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
+
+            //int[] numbers = new int[size];
+
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write($"Enter element {i + 1}: ");
+            //    int.TryParse(Console.ReadLine(), out numbers[i]);
+            //}
+
+            //int largest = numbers[0];
+            //int secondLargest = numbers[0];
+
+            //for(int i = 0;i < numbers.Length;i++)
+            //{
+            //    if (numbers[i] > largest)
+            //    {
+            //        secondLargest = largest;
+            //        largest = numbers[i];
+            //    }
+            //    else if (numbers[i] > secondLargest && numbers[i] != largest)
+            //    {
+            //        secondLargest = numbers[i];
+            //    }
+            //}
+
+            //Console.WriteLine($"Second largest number = {secondLargest}");
+            #endregion
+
+            #region
+
+            // 25. write a program find the longest distance between Two equal cells. In this example. The distance is measured by the number Of cells- for example,
+            //     the distance between the first and the fourth cell is 2 (cell 2 and cell 3).
+
             Console.Write("Enter array size: ");
             int.TryParse(Console.ReadLine(), out int size);
 
@@ -659,23 +694,26 @@ namespace Session3
                 int.TryParse(Console.ReadLine(), out numbers[i]);
             }
 
-            int largest = numbers[0];
-            int secondLargest = numbers[0];
+            int LongestDistance = 0;
 
-            for(int i = 0;i < numbers.Length;i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] > largest)
+                for (int j = numbers.Length - 1; j > i; j--)
                 {
-                    secondLargest = largest;
-                    largest = numbers[i];
-                }
-                else if (numbers[i] > secondLargest && numbers[i] != largest)
-                {
-                    secondLargest = numbers[i];
+                    if (numbers[i] == numbers[j])
+                    {
+                        int distance = j - i - 1;
+
+                        if (distance > LongestDistance)
+                        {
+                            LongestDistance = distance;
+                        }
+
+                        break;
+                    }
                 }
             }
-
-            Console.WriteLine($"Second largest number = {secondLargest}");
+            Console.WriteLine($"Longest distance = {LongestDistance}");
             #endregion
         }
     }
