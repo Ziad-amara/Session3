@@ -615,6 +615,39 @@ namespace Session3
 
             // 23. Write a program in C# Sharp to find maximum and minimum element in an array
 
+            //Console.Write("Enter array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
+
+            //int[] numbers = new int[size];
+
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write($"Enter element {i + 1}: ");
+            //    int.TryParse(Console.ReadLine(), out numbers[i]);
+            //}
+
+            //int max = numbers[0];
+            //int min = numbers[0];
+
+            //for (int i = 1; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] > max)
+            //        max = numbers[i];
+
+
+            //    if (numbers[i] < min)
+            //        min = numbers[i];
+
+            //}
+
+            //Console.WriteLine($"Maximum = {max}");
+            //Console.WriteLine($"Minimum = {min}");
+            #endregion
+
+            #region
+
+            // 24. Write a program in C# Sharp to find the second largest element in an array.
+
             Console.Write("Enter array size: ");
             int.TryParse(Console.ReadLine(), out int size);
 
@@ -626,22 +659,23 @@ namespace Session3
                 int.TryParse(Console.ReadLine(), out numbers[i]);
             }
 
-            int max = numbers[0];
-            int min = numbers[0];
+            int largest = numbers[0];
+            int secondLargest = numbers[0];
 
-            for (int i = 1; i < numbers.Length; i++)
+            for(int i = 0;i < numbers.Length;i++)
             {
-                if (numbers[i] > max)
-                    max = numbers[i];
-                
-
-                if (numbers[i] < min)
-                    min = numbers[i];
-                
+                if (numbers[i] > largest)
+                {
+                    secondLargest = largest;
+                    largest = numbers[i];
+                }
+                else if (numbers[i] > secondLargest && numbers[i] != largest)
+                {
+                    secondLargest = numbers[i];
+                }
             }
 
-            Console.WriteLine($"Maximum = {max}");
-            Console.WriteLine($"Minimum = {min}");
+            Console.WriteLine($"Second largest number = {secondLargest}");
             #endregion
         }
     }
