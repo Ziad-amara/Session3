@@ -241,42 +241,82 @@
 
             // 11. Write a program to input the month number and print the number of days in that month.
 
-            Console.Write("Enter month number: ");
-            bool parsed = int.TryParse(Console.ReadLine(), out int month);
+            //Console.Write("Enter month number: ");
+            //bool parsed = int.TryParse(Console.ReadLine(), out int month);
 
-            if (parsed)
+            //if (parsed)
+            //{
+            //    switch (month)
+            //    {
+            //        case 1:
+            //        case 3:
+            //        case 5:
+            //        case 7:
+            //        case 8:
+            //        case 10:
+            //        case 12:
+            //            Console.WriteLine("Days in Month: 31");
+            //            break;
+
+            //        case 4:
+            //        case 6:
+            //        case 9:
+            //        case 11:
+            //            Console.WriteLine("Days in Month: 30");
+            //            break;
+
+            //        case 2:
+            //            Console.WriteLine("Days in Month: 28");
+            //            break;
+
+            //        default:
+            //            Console.WriteLine("Invalid month number.");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input.");
+            //}
+            #endregion
+
+            #region
+
+            // 12. Write a program to create a Simple Calculator.
+
+            Console.Write("Enter first number: ");
+            double.TryParse(Console.ReadLine(), out double num1);
+
+            Console.Write("Enter second number: ");
+            double.TryParse(Console.ReadLine(), out double num2);
+
+            Console.Write("Enter operator (+, -, *, /): ");
+            char.TryParse(Console.ReadLine(), out char operation);
+
+            switch (operation)
             {
-                switch (month)
-                {
-                    case 1:
-                    case 3:
-                    case 5:
-                    case 7:
-                    case 8:
-                    case 10:
-                    case 12:
-                        Console.WriteLine("Days in Month: 31");
-                        break;
+                case '+':
+                    Console.WriteLine($"Result = {num1 + num2}");
+                    break;
 
-                    case 4:
-                    case 6:
-                    case 9:
-                    case 11:
-                        Console.WriteLine("Days in Month: 30");
-                        break;
+                case '-':
+                    Console.WriteLine($"Result = {num1 - num2}");
+                    break;
 
-                    case 2:
-                        Console.WriteLine("Days in Month: 28");
-                        break;
+                case '*':
+                    Console.WriteLine($"Result = {num1 * num2}");
+                    break;
 
-                    default:
-                        Console.WriteLine("Invalid month number.");
-                        break;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Invalid input.");
+                case '/':
+                    if (num2 != 0)
+                        Console.WriteLine($"Result = {num1 / num2}");
+                    else
+                        Console.WriteLine("Cannot divide by zero.");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid operation.");
+                    break;
             }
             #endregion
         }
