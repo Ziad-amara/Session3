@@ -421,36 +421,73 @@
 
             // 17. Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line.
 
-            Console.Write("Enter x1: ");
-            double.TryParse(Console.ReadLine(), out double x1);
+            //Console.Write("Enter x1: ");
+            //double.TryParse(Console.ReadLine(), out double x1);
 
-            Console.Write("Enter y1: ");
-            double.TryParse(Console.ReadLine(), out double y1);
+            //Console.Write("Enter y1: ");
+            //double.TryParse(Console.ReadLine(), out double y1);
 
-            Console.Write("Enter x2: ");
-            double.TryParse(Console.ReadLine(), out double x2);
+            //Console.Write("Enter x2: ");
+            //double.TryParse(Console.ReadLine(), out double x2);
 
-            Console.Write("Enter y2: ");
-            double.TryParse(Console.ReadLine(), out double y2);
+            //Console.Write("Enter y2: ");
+            //double.TryParse(Console.ReadLine(), out double y2);
 
-            Console.Write("Enter x3: ");
-            double.TryParse(Console.ReadLine(), out double x3);
+            //Console.Write("Enter x3: ");
+            //double.TryParse(Console.ReadLine(), out double x3);
 
-            Console.Write("Enter y3: ");
-            double.TryParse(Console.ReadLine(), out double y3);
+            //Console.Write("Enter y3: ");
+            //double.TryParse(Console.ReadLine(), out double y3);
 
-            if (x2 == x1 || x3 == x2)  // if slope equal zero => error 
+            //if (x2 == x1 || x3 == x2)  // if slope equal zero => error 
+            //{
+            //    Console.WriteLine("Cannot calculate the slope.");
+            //}
+            //else if ((y2 - y1) / (x2 - x1) == (y3 - y2)/(x3 - x2))
+            //{
+            //    Console.WriteLine("The points lie on a straight line.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The points do not lie on a straight line.");
+            //}
+            #endregion
+
+            #region
+
+            /* 18.Within a company, the efficiency of workers is evaluated based on the duration required to complete a specific task.
+             * A worker's efficiency level is determined as follows:
+             * - If the worker completes the job within 2 to 3 hours, they are considered highly efficient.
+             * - If the worker takes 3 to 4 hours, they are instructed to increase their speed. 
+             * - If the worker takes 4 to 5 hours, they are provided with training to enhance their speed. 
+             * - If the worker takes more than 5 hours, they are required to leave the company.
+             * To calculate the efficiency of a worker, the time taken for the task is obtained via user input from the keyboard. 
+             */
+
+            Console.Write("Enter the time taken in hours: ");
+            double.TryParse(Console.ReadLine(), out double hours);
+
+            if (hours >= 2 && hours <= 3)
             {
-                Console.WriteLine("Cannot calculate the slope.");
+                Console.WriteLine("Highly efficient.");
             }
-            else if ((y2 - y1) / (x2 - x1) == (y3 - y2)/(x3 - x2))
+            else if (hours > 3 && hours <= 4)
             {
-                Console.WriteLine("The points lie on a straight line.");
+                Console.WriteLine("Increase your speed.");
+            }
+            else if (hours > 4 && hours <= 5)
+            {
+                Console.WriteLine("Training is required.");
+            }
+            else if (hours > 5)
+            {
+                Console.WriteLine("You are required to leave the company.");
             }
             else
             {
-                Console.WriteLine("The points do not lie on a straight line.");
+                Console.WriteLine("Invalid time.");
             }
+
             #endregion
         }
     }
