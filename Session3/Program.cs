@@ -105,18 +105,41 @@
 
             // 4. Write a program that allows the user to insert an integer number then check If a number is even or odd.
 
-            Console.Write("Enter a number: ");
-            int.TryParse(Console.ReadLine(), out int num);
+            //Console.Write("Enter a number: ");
+            //int.TryParse(Console.ReadLine(), out int num);
 
-            if(num % 2 == 0)
-            {
-                Console.WriteLine("it is an even number.");
-            }
-            else
-            {
-                Console.WriteLine("it's an odd number.");
-            }
+            //if(num % 2 == 0)
+            //{
+            //    Console.WriteLine("it is an even number.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("it's an odd number.");
+            //}
 
+            #endregion
+
+            #region
+
+            // 5. Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
+
+            int[] Vowel_chars = { 'a', 'e', 'i', 'u', 'o' };
+            bool isVowel = false;
+            Console.Write("Enter a single char: ");
+            char.TryParse(Console.ReadLine(), out char character);
+
+            for(int i = 0; i < Vowel_chars.Length; i++)
+            {
+                if(character == Vowel_chars[i])
+                {
+                    Console.WriteLine("it is a Vowel Char.");
+                    isVowel = true;
+                }
+            }
+            if(!isVowel)
+            {
+                Console.WriteLine("it is a consonant char.");
+            }
             #endregion
         }
     }
