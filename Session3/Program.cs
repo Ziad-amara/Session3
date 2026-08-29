@@ -355,39 +355,65 @@
 
             // 15. Write a program in C# Sharp to find prime numbers within a range of numbers.
 
-            Console.Write("Enter starting number: ");
-            int.TryParse(Console.ReadLine(), out int start);
+            //Console.Write("Enter starting number: ");
+            //int.TryParse(Console.ReadLine(), out int start);
 
-            Console.Write("Enter ending number: ");
-            int.TryParse(Console.ReadLine(), out int end);
+            //Console.Write("Enter ending number: ");
+            //int.TryParse(Console.ReadLine(), out int end);
 
-            Console.WriteLine($"Prime numbers between {start} and {end}:");
+            //Console.WriteLine($"Prime numbers between {start} and {end}:");
 
-            for (int number = start; number <= end; number++)
+            //for (int number = start; number <= end; number++)
+            //{
+            //    bool isPrime = true;
+
+            //    if (number < 2)
+            //    {
+            //        isPrime = false;
+            //    }
+            //    else
+            //    {
+            //        for (int i = 2; i < number; i++)
+            //        {
+            //            if (number % i == 0)
+            //            {
+            //                isPrime = false;
+            //                break;
+            //            }
+            //        }
+            //    }
+
+            //    if (isPrime)
+            //    {
+            //        Console.Write(number + " ");
+            //    }
+            //}
+
+            #endregion
+
+            #region
+
+            // 16. Write a program in C# Sharp to convert a decimal number into binary without using an array.
+
+            Console.Write("Enter a number: ");
+            int.TryParse(Console.ReadLine(), out int number);
+
+            string binary = "";
+
+            if(number == 0)
             {
-                bool isPrime = true;
-
-                if (number < 2)
-                {
-                    isPrime = false;
-                }
-                else
-                {
-                    for (int i = 2; i < number; i++)
-                    {
-                        if (number % i == 0)
-                        {
-                            isPrime = false;
-                            break;
-                        }
-                    }
-                }
-
-                if (isPrime)
-                {
-                    Console.Write(number + " ");
-                }
+                Console.WriteLine("the number is zero ");
             }
+            while (number > 0)
+            {
+                int remainder = number % 2;
+
+                binary = remainder + binary;
+
+                number /= 2;
+            }
+
+            Console.WriteLine($"The Binary is: {binary}");
 
             #endregion
         }
