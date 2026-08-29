@@ -541,32 +541,75 @@ namespace Session3
 
             // 21. Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
 
-            int[] arr1 = { 1, 2, 3, 4 };
-            int[] arr2 = { 5, 6, 7, 8 };
-            
-            int[] merged = new int[arr1.Length  + arr2.Length ];
+            //int[] arr1 = { 1, 2, 3, 4 };
+            //int[] arr2 = { 5, 6, 7, 8 };
 
-            // copy the first arr
-            for(int i = 0;i< arr1.Length;i++)
-            {
-                merged[i] = arr1[i];
-            }
+            //int[] merged = new int[arr1.Length  + arr2.Length ];
 
-            // copy the second arr
-            for (int i = 0; i < arr2.Length; i++)
-            {
-                merged[arr1.Length + i] = arr2[i];
-            }
+            //// copy the first arr
+            //for(int i = 0;i< arr1.Length;i++)
+            //{
+            //    merged[i] = arr1[i];
+            //}
 
-            //print the new arr
-            for(int k = 0; k < merged.Length;k++)
-            {
-                Console.Write(merged[k] + " ");
-            }
+            //// copy the second arr
+            //for (int i = 0; i < arr2.Length; i++)
+            //{
+            //    merged[arr1.Length + i] = arr2[i];
+            //}
+
+            ////print the new arr
+            //for(int k = 0; k < merged.Length;k++)
+            //{
+            //    Console.Write(merged[k] + " ");
+            //}
 
             #endregion
 
-           
+            #region
+
+            // 22. Write a program in C# Sharp to count the frequency of each element of an array.
+
+            Console.Write("Enter array size: ");
+            int.TryParse(Console.ReadLine(), out int size);
+
+            int[] numbers = new int[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write($"Enter element {i + 1}: ");
+                int.TryParse(Console.ReadLine(), out numbers[i]);
+            }
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                bool alreadyCounted = false;
+
+                for (int j = 0; j < i; j++)
+                {
+                    if (numbers[i] == numbers[j])
+                    {
+                        alreadyCounted = true;
+                        break;
+                    }
+                }
+
+                if (!alreadyCounted)
+                {
+                    int count = 0;
+
+                    for (int j = 0; j < numbers.Length; j++)
+                    {
+                        if (numbers[i] == numbers[j])
+                        {
+                            count++;
+                        }
+                    }
+
+                    Console.WriteLine($"{numbers[i]} appears {count} times.");
+                }
+            }
+            #endregion
         }
     }
 }
