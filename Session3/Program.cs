@@ -1,4 +1,6 @@
-﻿namespace Session3
+﻿using System.Security.Cryptography;
+
+namespace Session3
 {
     internal class Program
     {
@@ -516,24 +518,55 @@
 
             // 20. Write a program in C# Sharp to find the sum of all elements of the array.
 
-            Console.Write("Enter array size: ");
-            int.TryParse(Console.ReadLine(), out int size);
+            //Console.Write("Enter array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
 
-            int[] numbers = new int[size];
+            //int[] numbers = new int[size];
 
-            int sum = 0;
+            //int sum = 0;
 
-            for (int i = 0; i < numbers.Length; i++)
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.Write($"Enter element {i + 1}: ");
+
+            //    int.TryParse(Console.ReadLine(), out numbers[i]);
+
+            //    sum += numbers[i];
+            //}
+
+            //Console.WriteLine($"Sum = {sum}");
+            #endregion
+
+            #region
+
+            // 21. Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
+
+            int[] arr1 = { 1, 2, 3, 4 };
+            int[] arr2 = { 5, 6, 7, 8 };
+            
+            int[] merged = new int[arr1.Length  + arr2.Length ];
+
+            // copy the first arr
+            for(int i = 0;i< arr1.Length;i++)
             {
-                Console.Write($"Enter element {i + 1}: ");
-
-                int.TryParse(Console.ReadLine(), out numbers[i]);
-
-                sum += numbers[i];
+                merged[i] = arr1[i];
             }
 
-            Console.WriteLine($"Sum = {sum}");
+            // copy the second arr
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                merged[arr1.Length + i] = arr2[i];
+            }
+
+            //print the new arr
+            for(int k = 0; k < merged.Length;k++)
+            {
+                Console.Write(merged[k] + " ");
+            }
+
             #endregion
+
+           
         }
     }
 }
