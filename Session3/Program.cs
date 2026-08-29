@@ -734,46 +734,71 @@ namespace Session3
             // Accept value from user and store them in first array.
             // Now copy all the elements of first array on second array and print second array.
 
-            Console.Write("Enter number of rows: ");
-            int.TryParse(Console.ReadLine(), out int rows);
+            //Console.Write("Enter number of rows: ");
+            //int.TryParse(Console.ReadLine(), out int rows);
 
-            Console.Write("Enter number of columns: ");
-            int.TryParse(Console.ReadLine(), out int columns);
+            //Console.Write("Enter number of columns: ");
+            //int.TryParse(Console.ReadLine(), out int columns);
 
-            int[,] arr1 = new int[rows, columns];
-            int[,] arr2 = new int[rows, columns];
+            //int[,] arr1 = new int[rows, columns];
+            //int[,] arr2 = new int[rows, columns];
 
-            Console.WriteLine("Enter elements:");
+            //Console.WriteLine("Enter elements:");
 
-            for (int i = 0; i < rows; i++)
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < columns; j++)
+            //    {
+            //        Console.Write($"Element [{i},{j}]: ");
+
+            //        int.TryParse(Console.ReadLine(), out arr1[i, j]);
+            //    }
+            //}
+
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < columns; j++)
+            //    {
+            //        arr2[i, j] = arr1[i, j];
+            //    }
+            //}
+
+            //Console.WriteLine("Second Arrady: ");
+
+            //for(int i = 0; i< rows; i++)
+            //{
+            //    for(int j = 0; j < columns;j++)
+            //    {
+            //        Console.Write(arr2[i,j]+ " ");
+            //    }
+
+            //    Console.WriteLine();
+
+            //}
+
+            #endregion
+
+            #region 
+
+            // 28. Write a Program to Print One Dimensional Array in Reverse Order
+
+            Console.Write("Enter array size: ");
+            int.TryParse(Console.ReadLine(), out int size);
+
+            int[] numbers = new int[size];
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                for (int j = 0; j < columns; j++)
-                {
-                    Console.Write($"Element [{i},{j}]: ");
+                Console.Write($"Enter element {i + 1}: ");
 
-                    int.TryParse(Console.ReadLine(), out arr1[i, j]);
-                }
+                int.TryParse(Console.ReadLine(), out numbers[i]);
             }
 
-            for (int i = 0; i < rows; i++)
+            Console.WriteLine("Array in reverse order:");
+
+            for (int i = numbers.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < columns; j++)
-                {
-                    arr2[i, j] = arr1[i, j];
-                }
-            }
-
-            Console.WriteLine("Second Arrady: ");
-
-            for(int i = 0; i< rows; i++)
-            {
-                for(int j = 0; j < columns;j++)
-                {
-                    Console.Write(arr2[i,j]+ " ");
-                }
-                
-                Console.WriteLine();
-
+                Console.Write(numbers[i] + " ");
             }
 
             #endregion
