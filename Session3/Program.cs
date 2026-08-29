@@ -683,38 +683,51 @@ namespace Session3
             // 25. write a program find the longest distance between Two equal cells. In this example. The distance is measured by the number Of cells- for example,
             //     the distance between the first and the fourth cell is 2 (cell 2 and cell 3).
 
-            Console.Write("Enter array size: ");
-            int.TryParse(Console.ReadLine(), out int size);
+            //Console.Write("Enter array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
 
-            int[] numbers = new int[size];
+            //int[] numbers = new int[size];
 
-            for (int i = 0; i < size; i++)
-            {
-                Console.Write($"Enter element {i + 1}: ");
-                int.TryParse(Console.ReadLine(), out numbers[i]);
-            }
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write($"Enter element {i + 1}: ");
+            //    int.TryParse(Console.ReadLine(), out numbers[i]);
+            //}
 
-            int LongestDistance = 0;
+            //int LongestDistance = 0;
 
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                for (int j = numbers.Length - 1; j > i; j--)
-                {
-                    if (numbers[i] == numbers[j])
-                    {
-                        int distance = j - i - 1;
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    for (int j = numbers.Length - 1; j > i; j--)
+            //    {
+            //        if (numbers[i] == numbers[j])
+            //        {
+            //            int distance = j - i - 1;
 
-                        if (distance > LongestDistance)
-                        {
-                            LongestDistance = distance;
-                        }
+            //            if (distance > LongestDistance)
+            //            {
+            //                LongestDistance = distance;
+            //            }
 
-                        break;
-                    }
-                }
-            }
-            Console.WriteLine($"Longest distance = {LongestDistance}");
+            //            break;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine($"Longest distance = {LongestDistance}");
             #endregion
+
+            #region
+
+            // 26. Given a list of space separated words, reverse the order of the words.
+
+            Console.Write("Enter a sentence: ");
+            string sentence = Console.ReadLine();
+            string[] Words = sentence.Split(' ');
+
+            Array.Reverse(Words);
+            Console.WriteLine(string.Join(" ",Words));
+            #endregion
+
         }
     }
 }
