@@ -41,32 +41,63 @@
 
             // 2. Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive.
 
-            bool isTheConversionOccur = false;
+            //bool isTheConversionOccur = false;
 
-            do
+            //do
+            //{
+            //    Console.Write("Enter the number: ");
+            //    isTheConversionOccur = int.TryParse(Console.ReadLine(), out int number);
+
+            //    if (isTheConversionOccur)
+            //    {
+            //        if (number < 0)
+            //        {
+            //            Console.WriteLine("Negative");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Positive");
+            //        }
+            //    }
+
+            //    else
+            //    {
+            //        Console.WriteLine("Cannot convert the input to a number.");
+            //    }
+
+            //}
+            //while (!isTheConversionOccur);
+
+            #endregion
+
+            #region
+
+            // 3. Write a program that takes 3 integers from the user then prints the max element and the min element.
+
+            int[] numbers = new int[3];
+
+            for (int i = 0; i < 3; i++)
             {
-                Console.Write("Enter the number: ");
-                isTheConversionOccur = int.TryParse(Console.ReadLine(), out int number);
-
-                if (isTheConversionOccur)
+                bool parsed = false;
+                do
                 {
-                    if (number < 0)
-                    {
-                        Console.WriteLine("Negative");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Positive");
-                    }
-                }
-
-                else
-                {
-                    Console.WriteLine("Cannot convert the input to a number.");
-                }
-
+                    Console.Write($"Enter integer number {i + 1}: ");
+                    parsed = int.TryParse(Console.ReadLine(), out numbers[i]);
+                    if (!parsed)
+                        Console.WriteLine("Invalid input. Please enter a valid integer.");
+                } 
+                while (!parsed);
             }
-            while (!isTheConversionOccur);
+
+            int min = numbers[0];
+            int max = numbers[0];
+            for (int i = 1; i < 3; i++)
+            {
+                if (numbers[i] < min) min = numbers[i];
+                if (numbers[i] > max) max = numbers[i];
+            }
+
+            Console.WriteLine($"Min: {min}, Max: {max}");
 
             #endregion
         }
