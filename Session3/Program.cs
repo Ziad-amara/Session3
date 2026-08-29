@@ -161,13 +161,30 @@
 
             // 7. Write a program that allows the user to insert an integer then print a multiplication table up to 12.
 
-            Console.Write("Enter a number: ");
+            //Console.Write("Enter a number: ");
+            //int.TryParse(Console.ReadLine(), out int num);
+
+            //for(int i = 1; i <= 12; i++ )
+            //{
+            //    Console.Write($"{i*num}  ");
+            //}
+            #endregion
+
+            #region
+
+            // 8. Write a program that allows to user to insert number then print all even numbers between 1 to this number
+
+            Console.Write("Enter a number to print even nums between 1 and your number: ");
             int.TryParse(Console.ReadLine(), out int num);
 
-            for(int i = 1; i <= 12; i++ )
+            for (int i = 1; i <= num; i++)
             {
-                Console.Write($"{i*num}  ");
+                if(i % 2 == 0)
+                {
+                    Console.Write(i + " ");
+                }
             }
+
             #endregion
         }
     }
