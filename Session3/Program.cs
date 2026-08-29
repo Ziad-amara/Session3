@@ -123,22 +123,37 @@
 
             // 5. Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
 
-            int[] Vowel_chars = { 'a', 'e', 'i', 'u', 'o' };
-            bool isVowel = false;
-            Console.Write("Enter a single char: ");
-            char.TryParse(Console.ReadLine(), out char character);
+            //int[] Vowel_chars = { 'a', 'e', 'i', 'u', 'o' };
+            //bool isVowel = false;
 
-            for(int i = 0; i < Vowel_chars.Length; i++)
+            //Console.Write("Enter a single char: ");
+            //char.TryParse(Console.ReadLine(), out char character);
+
+            //for(int i = 0; i < Vowel_chars.Length; i++)
+            //{
+            //    if(character == Vowel_chars[i])
+            //    {
+            //        Console.WriteLine("it is a Vowel Char.");
+            //        isVowel = true;
+            //    }
+            //}
+            //if(!isVowel)
+            //{
+            //    Console.WriteLine("it is a consonant char.");
+            //}
+
+            #endregion
+
+            #region
+
+            // 6. Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
+
+            Console.Write("Enter a number to print between 1 and your number: ");
+            int.TryParse(Console.ReadLine(), out int num);
+
+            for(int i = 2; i < num; i++)
             {
-                if(character == Vowel_chars[i])
-                {
-                    Console.WriteLine("it is a Vowel Char.");
-                    isVowel = true;
-                }
-            }
-            if(!isVowel)
-            {
-                Console.WriteLine("it is a consonant char.");
+                Console.WriteLine(i);
             }
             #endregion
         }
