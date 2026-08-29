@@ -148,12 +148,25 @@
 
             // 6. Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
 
-            Console.Write("Enter a number to print between 1 and your number: ");
+            //Console.Write("Enter a number to print between 1 and your number: ");
+            //int.TryParse(Console.ReadLine(), out int num);
+
+            //for(int i = 1; i <= num; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+
+            #region
+
+            // 7. Write a program that allows the user to insert an integer then print a multiplication table up to 12.
+
+            Console.Write("Enter a number: ");
             int.TryParse(Console.ReadLine(), out int num);
 
-            for(int i = 2; i < num; i++)
+            for(int i = 1; i <= 12; i++ )
             {
-                Console.WriteLine(i);
+                Console.Write($"{i*num}  ");
             }
             #endregion
         }
