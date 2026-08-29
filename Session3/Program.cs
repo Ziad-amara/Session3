@@ -324,17 +324,31 @@
 
             // 13. Write a program to allow the user to enter a string and print the REVERSE of it.
 
-            Console.Write("Enter a string: ");
-            string text = Console.ReadLine();
+            //Console.Write("Enter a string: ");
+            //string text = Console.ReadLine();
 
-            string reversed = "";
+            //string reversed = "";
 
-            for (int i = text.Length - 1; i >= 0; i--)
-            {
-                reversed += text[i];
-            }
+            //for (int i = text.Length - 1; i >= 0; i--)
+            //{
+            //    reversed += text[i];
+            //}
+
+            #endregion
 
             #region
+
+            // 14. Write a program to allow the user to enter int and print the REVERSED of it.
+
+            Console.Write("Enter an integer: ");
+            int.TryParse(Console.ReadLine(), out int num);
+
+            string strnum = num.ToString();
+            for(int i = strnum.Length - 1; i >= 0; i--)
+            {
+                Console.Write(strnum[i]);
+            }
+            #endregion
         }
     }
 }
