@@ -395,26 +395,62 @@
 
             // 16. Write a program in C# Sharp to convert a decimal number into binary without using an array.
 
-            Console.Write("Enter a number: ");
-            int.TryParse(Console.ReadLine(), out int number);
+            //Console.Write("Enter a number: ");
+            //int.TryParse(Console.ReadLine(), out int number);
 
-            string binary = "";
+            //string binary = "";
 
-            if(number == 0)
+            //if(number == 0)
+            //{
+            //    Console.WriteLine("the number is zero ");
+            //}
+            //while (number > 0)
+            //{
+            //    int remainder = number % 2;
+
+            //    binary = remainder + binary;
+
+            //    number /= 2;
+            //}
+
+            //Console.WriteLine($"The Binary is: {binary}");
+
+            #endregion
+
+            #region 
+
+            // 17. Create a program that asks the user to input three points (x1, y1), (x2, y2), and (x3, y3), and determines whether these points lie on a single straight line.
+
+            Console.Write("Enter x1: ");
+            double.TryParse(Console.ReadLine(), out double x1);
+
+            Console.Write("Enter y1: ");
+            double.TryParse(Console.ReadLine(), out double y1);
+
+            Console.Write("Enter x2: ");
+            double.TryParse(Console.ReadLine(), out double x2);
+
+            Console.Write("Enter y2: ");
+            double.TryParse(Console.ReadLine(), out double y2);
+
+            Console.Write("Enter x3: ");
+            double.TryParse(Console.ReadLine(), out double x3);
+
+            Console.Write("Enter y3: ");
+            double.TryParse(Console.ReadLine(), out double y3);
+
+            if (x2 == x1 || x3 == x2)  // if slope equal zero => error 
             {
-                Console.WriteLine("the number is zero ");
+                Console.WriteLine("Cannot calculate the slope.");
             }
-            while (number > 0)
+            else if ((y2 - y1) / (x2 - x1) == (y3 - y2)/(x3 - x2))
             {
-                int remainder = number % 2;
-
-                binary = remainder + binary;
-
-                number /= 2;
+                Console.WriteLine("The points lie on a straight line.");
             }
-
-            Console.WriteLine($"The Binary is: {binary}");
-
+            else
+            {
+                Console.WriteLine("The points do not lie on a straight line.");
+            }
             #endregion
         }
     }
