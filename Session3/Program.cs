@@ -203,38 +203,81 @@
 
             // 10. Write a program to enter marks of five subjects and calculate total, average and percentage.
 
-            int[] Marks = new int[5];
+            //int[] Marks = new int[5];
 
-            for(int i = 0; i <5; i++)
+            //for(int i = 0; i <5; i++)
+            //{
+            //    bool parsed = false;
+            //    do
+            //    {
+            //        Console.Write($"Enter the subject{i} degree: ");
+            //        parsed = int.TryParse(Console.ReadLine(), out Marks[i]);
+            //        if(!parsed)
+            //            Console.WriteLine("your input is invalid!");
+            //    }
+            //    while (!parsed);
+            //}
+
+            //// for the total mark
+            //double Total = 0;
+
+            //for(int j =0; j< Marks.Length;j++)
+            //{
+            //     Total += Marks[j];
+            //}
+            //Console.WriteLine($"The total is: {Total}");
+
+            //// Average 
+            //double average = Total / 5;
+            //Console.WriteLine($"The average is: {average}");
+
+            //// percantage
+            //double percentage = (Total / 500) * 100;
+            //Console.WriteLine($"The percantage is: {percentage}");
+
+            #endregion
+
+            #region
+
+            // 11. Write a program to input the month number and print the number of days in that month.
+
+            Console.Write("Enter month number: ");
+            bool parsed = int.TryParse(Console.ReadLine(), out int month);
+
+            if (parsed)
             {
-                bool parsed = false;
-                do
+                switch (month)
                 {
-                    Console.Write($"Enter the subject{i} degree: ");
-                    parsed = int.TryParse(Console.ReadLine(), out Marks[i]);
-                    if(!parsed)
-                        Console.WriteLine("your input is invalid!");
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        Console.WriteLine("Days in Month: 31");
+                        break;
+
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        Console.WriteLine("Days in Month: 30");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Days in Month: 28");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid month number.");
+                        break;
                 }
-                while (!parsed);
             }
-
-            // for the total mark
-            double Total = 0;
-
-            for(int j =0; j< Marks.Length;j++)
+            else
             {
-                 Total += Marks[j];
+                Console.WriteLine("Invalid input.");
             }
-            Console.WriteLine($"The total is: {Total}");
-
-            // Average 
-            double average = Total / 5;
-            Console.WriteLine($"The average is: {average}");
-
-            // percantage
-            double percentage = (Total / 500) * 100;
-            Console.WriteLine($"The percantage is: {percentage}");
-
             #endregion
         }
     }
