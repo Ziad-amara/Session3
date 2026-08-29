@@ -123,7 +123,7 @@
 
             // 5. Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
 
-            //int[] Vowel_chars = { 'a', 'e', 'i', 'u', 'o' };
+            //char[] Vowel_chars = { 'a', 'e', 'i', 'u', 'o' };
             //bool isVowel = false;
 
             //Console.Write("Enter a single char: ");
@@ -191,12 +191,50 @@
 
             // 9. Write a program that takes two integers then prints the power.
 
-            Console.Write("Enter (First: num) :  ");
-            int.TryParse(Console.ReadLine(), out int num);
-            Console.Write("Enter (Second : to power) : ");
-            int.TryParse(Console.ReadLine(), out int power);
+            //Console.Write("Enter (First: num) :  ");
+            //int.TryParse(Console.ReadLine(), out int num);
+            //Console.Write("Enter (Second : to power) : ");
+            //int.TryParse(Console.ReadLine(), out int power);
 
-            Console.WriteLine($"the answer: {Math.Pow(num, power)} ");
+            //Console.WriteLine($"the answer: {Math.Pow(num, power)} ");
+            #endregion
+
+            #region
+
+            // 10. Write a program to enter marks of five subjects and calculate total, average and percentage.
+
+            int[] Marks = new int[5];
+
+            for(int i = 0; i <5; i++)
+            {
+                bool parsed = false;
+                do
+                {
+                    Console.Write($"Enter the subject{i} degree: ");
+                    parsed = int.TryParse(Console.ReadLine(), out Marks[i]);
+                    if(!parsed)
+                        Console.WriteLine("your input is invalid!");
+                }
+                while (!parsed);
+            }
+
+            // for the total mark
+            double Total = 0;
+
+            for(int j =0; j< Marks.Length;j++)
+            {
+                 Total += Marks[j];
+            }
+            Console.WriteLine($"The total is: {Total}");
+
+            // Average 
+            double average = Total / 5;
+            Console.WriteLine($"The average is: {average}");
+
+            // percantage
+            double percentage = (Total / 500) * 100;
+            Console.WriteLine($"The percantage is: {percentage}");
+
             #endregion
         }
     }
