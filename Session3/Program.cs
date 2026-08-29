@@ -74,30 +74,48 @@
 
             // 3. Write a program that takes 3 integers from the user then prints the max element and the min element.
 
-            int[] numbers = new int[3];
+            //int[] numbers = new int[3];
 
-            for (int i = 0; i < 3; i++)
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    bool parsed = false;
+            //    do
+            //    {
+            //        Console.Write($"Enter integer number {i + 1}: ");
+            //        parsed = int.TryParse(Console.ReadLine(), out numbers[i]);
+            //        if (!parsed)
+            //            Console.WriteLine("Invalid input. Please enter a valid integer.");
+            //    } 
+            //    while (!parsed);
+            //}
+
+            //int min = numbers[0];
+            //int max = numbers[0];
+            //for (int i = 1; i < 3; i++)
+            //{
+            //    if (numbers[i] < min) min = numbers[i];
+            //    if (numbers[i] > max) max = numbers[i];
+            //}
+
+            //Console.WriteLine($"Min: {min}, Max: {max}");
+
+            #endregion
+
+            #region
+
+            // 4. Write a program that allows the user to insert an integer number then check If a number is even or odd.
+
+            Console.Write("Enter a number: ");
+            int.TryParse(Console.ReadLine(), out int num);
+
+            if(num % 2 == 0)
             {
-                bool parsed = false;
-                do
-                {
-                    Console.Write($"Enter integer number {i + 1}: ");
-                    parsed = int.TryParse(Console.ReadLine(), out numbers[i]);
-                    if (!parsed)
-                        Console.WriteLine("Invalid input. Please enter a valid integer.");
-                } 
-                while (!parsed);
+                Console.WriteLine("it is an even number.");
             }
-
-            int min = numbers[0];
-            int max = numbers[0];
-            for (int i = 1; i < 3; i++)
+            else
             {
-                if (numbers[i] < min) min = numbers[i];
-                if (numbers[i] > max) max = numbers[i];
+                Console.WriteLine("it's an odd number.");
             }
-
-            Console.WriteLine($"Min: {min}, Max: {max}");
 
             #endregion
         }
