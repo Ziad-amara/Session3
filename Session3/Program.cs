@@ -174,17 +174,29 @@
 
             // 8. Write a program that allows to user to insert number then print all even numbers between 1 to this number
 
-            Console.Write("Enter a number to print even nums between 1 and your number: ");
+            //Console.Write("Enter a number to print even nums between 1 and your number: ");
+            //int.TryParse(Console.ReadLine(), out int num);
+
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    if(i % 2 == 0)
+            //    {
+            //        Console.Write(i + " ");
+            //    }
+            //}
+
+            #endregion
+
+            #region
+
+            // 9. Write a program that takes two integers then prints the power.
+
+            Console.Write("Enter (First: num) :  ");
             int.TryParse(Console.ReadLine(), out int num);
+            Console.Write("Enter (Second : to power) : ");
+            int.TryParse(Console.ReadLine(), out int power);
 
-            for (int i = 1; i <= num; i++)
-            {
-                if(i % 2 == 0)
-                {
-                    Console.Write(i + " ");
-                }
-            }
-
+            Console.WriteLine($"the answer: {Math.Pow(num, power)} ");
             #endregion
         }
     }
