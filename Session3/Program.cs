@@ -720,14 +720,63 @@ namespace Session3
 
             // 26. Given a list of space separated words, reverse the order of the words.
 
-            Console.Write("Enter a sentence: ");
-            string sentence = Console.ReadLine();
-            string[] Words = sentence.Split(' ');
+            //Console.Write("Enter a sentence: ");
+            //string sentence = Console.ReadLine();
+            //string[] Words = sentence.Split(' ');
 
-            Array.Reverse(Words);
-            Console.WriteLine(string.Join(" ",Words));
+            //Array.Reverse(Words);
+            //Console.WriteLine(string.Join(" ",Words));
             #endregion
 
+            #region
+
+            // 27. Write a program to create two multidimensional arrays of same size.
+            // Accept value from user and store them in first array.
+            // Now copy all the elements of first array on second array and print second array.
+
+            Console.Write("Enter number of rows: ");
+            int.TryParse(Console.ReadLine(), out int rows);
+
+            Console.Write("Enter number of columns: ");
+            int.TryParse(Console.ReadLine(), out int columns);
+
+            int[,] arr1 = new int[rows, columns];
+            int[,] arr2 = new int[rows, columns];
+
+            Console.WriteLine("Enter elements:");
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"Element [{i},{j}]: ");
+
+                    int.TryParse(Console.ReadLine(), out arr1[i, j]);
+                }
+            }
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    arr2[i, j] = arr1[i, j];
+                }
+            }
+
+            Console.WriteLine("Second Arrady: ");
+
+            for(int i = 0; i< rows; i++)
+            {
+                for(int j = 0; j < columns;j++)
+                {
+                    Console.Write(arr2[i,j]+ " ");
+                }
+                
+                Console.WriteLine();
+
+            }
+
+            #endregion
         }
     }
 }
