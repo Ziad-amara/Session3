@@ -464,28 +464,50 @@
              * To calculate the efficiency of a worker, the time taken for the task is obtained via user input from the keyboard. 
              */
 
-            Console.Write("Enter the time taken in hours: ");
-            double.TryParse(Console.ReadLine(), out double hours);
+            //Console.Write("Enter the time taken in hours: ");
+            //double.TryParse(Console.ReadLine(), out double hours);
 
-            if (hours >= 2 && hours <= 3)
+            //if (hours >= 2 && hours <= 3)
+            //{
+            //    Console.WriteLine("Highly efficient.");
+            //}
+            //else if (hours > 3 && hours <= 4)
+            //{
+            //    Console.WriteLine("Increase your speed.");
+            //}
+            //else if (hours > 4 && hours <= 5)
+            //{
+            //    Console.WriteLine("Training is required.");
+            //}
+            //else if (hours > 5)
+            //{
+            //    Console.WriteLine("You are required to leave the company.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid time.");
+            //}
+
+            #endregion
+
+            #region
+
+            // 19. Write a program that prints an identity matrix using for loop,
+            // in other words takes a value n from the user and shows the identity table of size n * n.
+
+            Console.WriteLine("Enter matrix size: ");
+            bool parsed = int.TryParse(Console.ReadLine(), out int n);
+
+            if (parsed)
             {
-                Console.WriteLine("Highly efficient.");
-            }
-            else if (hours > 3 && hours <= 4)
-            {
-                Console.WriteLine("Increase your speed.");
-            }
-            else if (hours > 4 && hours <= 5)
-            {
-                Console.WriteLine("Training is required.");
-            }
-            else if (hours > 5)
-            {
-                Console.WriteLine("You are required to leave the company.");
-            }
-            else
-            {
-                Console.WriteLine("Invalid time.");
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        Console.Write(0);
+                    } 
+                    Console.WriteLine();
+                }
             }
 
             #endregion
