@@ -570,6 +570,51 @@ namespace Session3
 
             // 22. Write a program in C# Sharp to count the frequency of each element of an array.
 
+            //Console.Write("Enter array size: ");
+            //int.TryParse(Console.ReadLine(), out int size);
+
+            //int[] numbers = new int[size];
+
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write($"Enter element {i + 1}: ");
+            //    int.TryParse(Console.ReadLine(), out numbers[i]);
+            //}
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    bool alreadyCounted = false;
+
+            //    for (int j = 0; j < i; j++)
+            //    {
+            //        if (numbers[i] == numbers[j])
+            //        {
+            //            alreadyCounted = true;
+            //            break;
+            //        }
+            //    }
+
+            //    if (!alreadyCounted)
+            //    {
+            //        int count = 0;
+
+            //        for (int j = 0; j < numbers.Length; j++)
+            //        {
+            //            if (numbers[i] == numbers[j])
+            //            {
+            //                count++;
+            //            }
+            //        }
+
+            //        Console.WriteLine($"{numbers[i]} appears {count} times.");
+            //    }
+            //}
+            #endregion
+
+            #region
+
+            // 23. Write a program in C# Sharp to find maximum and minimum element in an array
+
             Console.Write("Enter array size: ");
             int.TryParse(Console.ReadLine(), out int size);
 
@@ -581,34 +626,22 @@ namespace Session3
                 int.TryParse(Console.ReadLine(), out numbers[i]);
             }
 
-            for (int i = 0; i < numbers.Length; i++)
+            int max = numbers[0];
+            int min = numbers[0];
+
+            for (int i = 1; i < numbers.Length; i++)
             {
-                bool alreadyCounted = false;
+                if (numbers[i] > max)
+                    max = numbers[i];
+                
 
-                for (int j = 0; j < i; j++)
-                {
-                    if (numbers[i] == numbers[j])
-                    {
-                        alreadyCounted = true;
-                        break;
-                    }
-                }
-
-                if (!alreadyCounted)
-                {
-                    int count = 0;
-
-                    for (int j = 0; j < numbers.Length; j++)
-                    {
-                        if (numbers[i] == numbers[j])
-                        {
-                            count++;
-                        }
-                    }
-
-                    Console.WriteLine($"{numbers[i]} appears {count} times.");
-                }
+                if (numbers[i] < min)
+                    min = numbers[i];
+                
             }
+
+            Console.WriteLine($"Maximum = {max}");
+            Console.WriteLine($"Minimum = {min}");
             #endregion
         }
     }
