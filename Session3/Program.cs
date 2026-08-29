@@ -284,41 +284,57 @@
 
             // 12. Write a program to create a Simple Calculator.
 
-            Console.Write("Enter first number: ");
-            double.TryParse(Console.ReadLine(), out double num1);
+            //Console.Write("Enter first number: ");
+            //double.TryParse(Console.ReadLine(), out double num1);
 
-            Console.Write("Enter second number: ");
-            double.TryParse(Console.ReadLine(), out double num2);
+            //Console.Write("Enter second number: ");
+            //double.TryParse(Console.ReadLine(), out double num2);
 
-            Console.Write("Enter operator (+, -, *, /): ");
-            char.TryParse(Console.ReadLine(), out char operation);
+            //Console.Write("Enter operator (+, -, *, /): ");
+            //char.TryParse(Console.ReadLine(), out char operation);
 
-            switch (operation)
-            {
-                case '+':
-                    Console.WriteLine($"Result = {num1 + num2}");
-                    break;
+            //switch (operation)
+            //{
+            //    case '+':
+            //        Console.WriteLine($"Result = {num1 + num2}");
+            //        break;
 
-                case '-':
-                    Console.WriteLine($"Result = {num1 - num2}");
-                    break;
+            //    case '-':
+            //        Console.WriteLine($"Result = {num1 - num2}");
+            //        break;
 
-                case '*':
-                    Console.WriteLine($"Result = {num1 * num2}");
-                    break;
+            //    case '*':
+            //        Console.WriteLine($"Result = {num1 * num2}");
+            //        break;
 
-                case '/':
-                    if (num2 != 0)
-                        Console.WriteLine($"Result = {num1 / num2}");
-                    else
-                        Console.WriteLine("Cannot divide by zero.");
-                    break;
+            //    case '/':
+            //        if (num2 != 0)
+            //            Console.WriteLine($"Result = {num1 / num2}");
+            //        else
+            //            Console.WriteLine("Cannot divide by zero.");
+            //        break;
 
-                default:
-                    Console.WriteLine("Invalid operation.");
-                    break;
-            }
+            //    default:
+            //        Console.WriteLine("Invalid operation.");
+            //        break;
+            //}
             #endregion
+
+            #region
+
+            // 13. Write a program to allow the user to enter a string and print the REVERSE of it.
+
+            Console.Write("Enter a string: ");
+            string text = Console.ReadLine();
+
+            string reversed = "";
+
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                reversed += text[i];
+            }
+
+            #region
         }
     }
 }
